@@ -64,8 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\CameraFollow.cs" />
+    <Compile Include="Assets\script\CheckPoint.cs" />
+    <Compile Include="Assets\script\DeathZone.cs" />
+    <Compile Include="Assets\script\DontDestroyOnLoadScene.cs" />
     <Compile Include="Assets\script\EnnemiPatrol.cs" />
+    <Compile Include="Assets\script\HealthBar.cs" />
+    <Compile Include="Assets\script\Inventory.cs" />
+    <Compile Include="Assets\script\LoadSpecificScene.cs" />
     <Compile Include="Assets\script\MovePlayer.cs" />
+    <Compile Include="Assets\script\PickUpObject.cs" />
+    <Compile Include="Assets\script\PlayerHealth.cs" />
+    <Compile Include="Assets\script\PlayerSpawn.cs" />
     <Compile Include="Assets\script\WeakSpot.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -7,55 +7,48 @@ public class MovePlayer : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
-    [SerializeField] private Transform  colRight;
-    [SerializeField] private Transform  colLeft;
+    [SerializeField] private Transform  GroundCheck;
+    
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-
+    public LayerMask collisionLayer;
 
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     //public bool isJumping = false;
     private bool isgrounded;
-    public int counter;
-    private void FixedUpdate()
+
+    private float horizontalMouvent;
+
+    void Update()
     {
-        float horizontalMouvent = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        horizontalMouvent = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
-
-
-        if (Physics2D.OverlapArea(colLeft.position, colRight.position))
-        {
-            counter = 0;
-        }
         if (Input.GetButtonDown("Jump"))
         {
-            if (counter == 1)
+            if (Physics2D.OverlapCircle(GroundCheck.position, 0.5f,collisionLayer))
             {
-                counter = 0;
+
                 rb.AddForce(new Vector2(0f, jumpForce));
             }
-            if(Physics2D.OverlapArea(colLeft.position, colRight.position))
-            {
-                counter = 0;
-                rb.AddForce(new Vector2(0f, jumpForce));
-                counter++;
-            }
-
-            //isJumping = true;
-            
-
-           
         }
-
-
-        Vector3 targetVelocity = new Vector2(horizontalMouvent, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
         Flip(rb.velocity.x);
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
-        animator.SetFloat("speed",characterVelocity);
+        animator.SetFloat("speed", characterVelocity);
+
+    }
+
+
+    void FixedUpdate()
+    {
+
+        Vector3 targetVelocity = new Vector2(horizontalMouvent, rb.velocity.y);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+
+       
+
 
         //code qui marche 
         //var hInput = Input.GetAxisRaw("Horizontal");

@@ -1,15 +1,24 @@
 ﻿<Properties StartupConfiguration="{C02D9775-7CCC-2777-CDAC-304BA3C0EF15}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/WeakSpot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/CheckPoint.cs">
     <Files>
-      <File FileName="Assets/script/MovePlayer.cs" Line="80" Column="6" />
-      <File FileName="Assets/script/CameraFollow.cs" Line="9" Column="30" />
-      <File FileName="Assets/script/EnnemiPatrol.cs" Line="23" Column="54" />
-      <File FileName="Assets/script/WeakSpot.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/MovePlayer.cs" Line="29" Column="67" />
+      <File FileName="Assets/script/CameraFollow.cs" />
+      <File FileName="Assets/script/EnnemiPatrol.cs" />
+      <File FileName="Assets/script/WeakSpot.cs" />
+      <File FileName="Assets/script/HealthBar.cs" />
+      <File FileName="Assets/script/PlayerHealth.cs" />
+      <File FileName="Assets/script/PickUpObject.cs" />
+      <File FileName="Assets/script/Inventory.cs" />
+      <File FileName="Assets/script/LoadSpecificScene.cs" Line="13" Column="93" />
+      <File FileName="Assets/script/DontDestroyOnLoadScene.cs" />
+      <File FileName="Assets/script/PlayerSpawn.cs" Line="9" Column="92" />
+      <File FileName="Assets/script/DeathZone.cs" Line="20" Column="53" />
+      <File FileName="Assets/script/CheckPoint.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce296793-0353-4395-b465-3b4223a69998" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="76a36028-5b78-4fd5-ae68-411ee3a2ebcc" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
